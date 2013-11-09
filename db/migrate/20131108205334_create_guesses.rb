@@ -3,6 +3,7 @@ class CreateGuesses < ActiveRecord::Migration
   	create_table :guesses do |t|
   		t.boolean :is_correct
   		t.belongs_to :round
+  		t.belongs_to :card
   	end
   end
 end
