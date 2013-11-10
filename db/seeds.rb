@@ -8,48 +8,65 @@
 
 
 #create 3 grades  
-  Grade.create(name: "First Grade")
-  Grade.create(name: "Second Grade")
-  Grade.create(name: "Third Grade")
+  Grade.create(name: "First Grade", level: 1)
+  Grade.create(name: "Second Grade", level: 2)
+  Grade.create(name: "Third Grade", level: 3)
 
-# Decks for grade 1
 
-deck = 1
 
-3.times do 
-	Deck.create(name: "Addition", level: deck, grade_id: 1)
-	Deck.create(name: "Subtraction", level: deck, grade_id: 1)
-	deck += 1
+#Addition decks for Grade level 1 
+
+#addition Decks
+level = 1
+3.times do
+	Deck.create(name: "Addition", level: level, grade_id: 1)
+	level += 1
 end
 
+#cards for deck 1 #find all decks with grade_id 1 and name is Addition. Then create the cards
+10.times do
+  var1 = rand(1..5)
+  var2 = rand(0..5) 
+	Card.create(num1: var1, num2: var2, deck_id: 1)
+end
 
-decks = Deck.where(name: "Addition", grade_id: 1)
 
 10.times do
-	card = Card.create(num1: num1, num2: num2, deck_id: deck_id)
-	card.extend(Addition)
+  var1 = rand(5..10)
+  var2 = rand(5..15) 
+	Card.create(num1: var1, num2: var2, deck_id: 2)
 end
 
+10.times do
+  var1 = rand(10..25)
+  var2 = rand(10..25) 
+	Card.create(num1: var1, num2: var2, deck_id: 3)
+end
 
-
-
-deck = 1
-
-# decks for grade 2
+#subtraction Deck
+level = 1
 3.times do
-	Deck.create(name: "Addition", level: deck, grade_id: 2)
-	Deck.create(name: "Subtraction", level: deck, grade_id: 2)
-	deck += 1
+  Deck.create(name: "Subtraction", level: level, grade_id: 1)
+  level += 1
 end
 
-deck = 1
-# decks for grade 3
-3.times do
-	Deck.create(name: "Addition", level: deck, grade_id: 3)
-	Deck.create(name: "Subtraction", level: deck, grade_id: 3)
-	deck += 1
+#cards for deck 1
+10.times do
+  var1 = rand(1..5)
+  var2 = rand(0..5) 
+  Card.create(num1: var1, num2: var2, deck_id: 4)
 end
 
+10.times do
+  var1 = rand(5..10)
+  var2 = rand(5..15) 
+  Card.create(num1: var1, num2: var2, deck_id: 5)
+end
 
+10.times do
+  var1 = rand(10..25)
+  var2 = rand(10..25) 
+  Card.create(num1: var1, num2: var2, deck_id: 6)
+end
 
 
