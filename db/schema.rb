@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(:version => 20131108234435) do
   end
 
   create_table "decks", :force => true do |t|
-    t.string  "name"
     t.integer "level"
     t.integer "grade_id"
   end
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20131108234435) do
   create_table "guesses", :force => true do |t|
     t.boolean "is_correct"
     t.integer "round_id"
+    t.integer "card_id"
   end
 
   create_table "rounds", :force => true do |t|
