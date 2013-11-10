@@ -8,7 +8,7 @@
 
 
 #create 3 grades  
-  Grade.create(name: "First Grade", level: 1)
+  Grade.create(name: "First Grade")
   # Grade.create(name: "Second Grade", level: 2)
   # Grade.create(name: "Third Grade", level: 3)
 
