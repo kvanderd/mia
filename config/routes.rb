@@ -6,8 +6,9 @@ Mia::Application.routes.draw do
     resources :decks, only: [:index]
   end
   
-  # resources :rounds
-  resources :guesses, only: [:new, :create]
+  resources :rounds do
+    resources :guesses, only: [:new, :create]
+  end
  
   
   # The priority is based upon order of creation:

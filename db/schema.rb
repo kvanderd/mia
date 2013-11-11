@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20131108234435) do
   end
 
   create_table "guesses", :force => true do |t|
-    t.boolean "is_correct"
+    t.integer "answer"
     t.integer "round_id"
     t.integer "card_id"
   end
