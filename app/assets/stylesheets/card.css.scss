@@ -8,15 +8,15 @@ $mia-brown: #643e27;
 #card {
 	margin-top: 10%;
 	height: 11em;
+	background: url("/assets/card.png") no-repeat;
 	#card_holder {
-		background: url("/assets/card.png") no-repeat;
-		height: 100%;
-		width: 100%;
+		display: block;
 		.num1, .num2, .operator { 
-			font-size: 6vw;
-			color: $mia-green;
-			margin: 10% 0% 0% 18%;
-			padding-top: .5em;
+			text-align: center;
+			font-size: 5vw;
+			color: $mia-brown;
+			// margin: 0% 0% 0% 22%;
+			padding-top: 1.2em;
 	  }
 	}
 }
@@ -24,8 +24,9 @@ $mia-brown: #643e27;
 
 #guess_answer {
 	height: 10%;
-	width: 60%;
-	margin-left: 5%;
+	width: 50%;
+	margin-left: 10%;
+	margin-top: 30%;
 	border: 5px solid $mia-purple;
 }
 
@@ -40,6 +41,7 @@ $mia-brown: #643e27;
   top: -9999px !important;
   left: -9999px !important;
 }
+
 
 
 #is_correct {
