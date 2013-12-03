@@ -3,3 +3,5 @@
 === Rails Application that teaches girl math.
 
 ==== live application: www.miamath.com
+
+===== MIT License (MIT)
