@@ -1,3 +1,10 @@
+$mia-pink: #cc33ff;
+$mia-purple: #4f0c8d;
+$mia-green: #60ba3e;
+$mia-brown: #643e27;
+
+
+
 #card {
 	margin-top: 10%;
 	height: 11em;
@@ -7,7 +14,7 @@
 		width: 100%;
 		.num1, .num2, .operator { 
 			font-size: 8vw;
-			color: #60ba3e;
+			color: $mia-green;
 			margin: 10% 0% 0% 18%;
 			padding-top: .5em;
 	  }
@@ -19,13 +26,13 @@
 	height: 10%;
 	width: 60%;
 	margin-left: 5%;
-	border: 5px solid #4f0c8d;
+	border: 5px solid $mia-purple;
 }
 
 #answer {
 	border: 5px solid #4f0c8d;
 	background-color: white;
-	color: #4f0c8d;
+	color: $mia-purple;
 }
 
 .hide { 
@@ -38,12 +45,5 @@
 #is_correct {
 	text-align: center;
 	font-size: 5vw;
-	color: #cc33ff;
+	color: $mia-pink;
 }
-/*
-#dren)colors{
-  4f0c8d - purple
-  cc33ff - pink
-  60ba3e - green
-  643e27 - brown
-}*/

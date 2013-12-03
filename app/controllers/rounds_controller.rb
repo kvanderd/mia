@@ -7,4 +7,9 @@ class RoundsController < ApplicationController
 	  redirect_to new_rounds_guesses_path(round.id)
   end
 
+  def show
+    round_id = session[:round_id]
+  	@round = Round.find(round_id)
+  end
+
 end

@@ -5,7 +5,7 @@ $counter = 0
 
 questionRequest = () ->
 	if $counter == $length
-		window.location.href = "/"
+		window.location.href = "/rounds"
 	else
 		$.ajax "/rounds/guesses/get_card",
 			method: "GET",

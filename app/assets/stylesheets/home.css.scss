@@ -1,3 +1,8 @@
+$mia-pink: #cc33ff;
+$mia-purple: #4f0c8d;
+$mia-green: #60ba3e;
+$mia-brown: #643e27;
+
 .mia_welcome {
 	background: url("/assets/mia_love.png") no-repeat;
 	display: inline-block;
@@ -17,13 +22,13 @@
 	font-size: 3vw;
 	}
 	li { display: inline;}
-	a { color: #643e27;}
-	a:hover { color: #4f0c8d}
+	a { color: $mia-pink;}
+	a:hover { color: $mia-purple}
 }
 
 .page_welcome {
 	text-align: center;
-	color: #4f0c8d;
+	color: $mia-purple;
 }
 
 /*iphone or small*/
