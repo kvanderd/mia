@@ -31,9 +31,7 @@ $mia-brown: #643e27;
 	color: $mia-purple;
 }
 
-* {
-	border: 1px solid red;
-}
+
 /* Firefox 3.0+ */
 
 .mia_welcome {
@@ -43,6 +41,10 @@ $mia-brown: #643e27;
 
 .grade_container {
 	margin-top: 0%;
+	h2 {
+	margin-top: 5%;
+	font-size: 2.5vw;
+	}
 }
 
 /* Safari 2.0+ */
