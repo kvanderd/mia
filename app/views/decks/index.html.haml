@@ -1,5 +1,5 @@
 = title "#{@decks.last.grade.name} Math Games"
-%h1.grid_12.page_welcome= "Select A #{@decks.pop.grade.name} Deck"
+%h1.grid_12.page_welcome= "Select A #{@decks.last.grade.name} Deck"
 .deck_container
 	%ul.grid_3.list_decks
 		-@decks.each do |deck|

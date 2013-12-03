@@ -3,3 +3,7 @@
 	%h2= "Deck Name: #{@round.deck.name}, Level #{@round.deck.level}"
 	%h4= "Percentage Correct: #{@round.correct_percentage}%"
 	%h5= "Played on: #{@round.created_at.strftime('%d %b. %Y')}"
+	- if !current_user
+		%h3 Create an account to save your scores.
+		=link_to "Create Account", new_user_path
+

@@ -16,8 +16,7 @@
 @subtraction_deck = Deck.create(name: "Subtraction", level: 1, grade_id: @grade2.id)
 @multiplication_deck = Deck.create(name: "Multiplication", level: 1, grade_id: @grade2.id)
 @division_deck = Deck.create(name: "Division", level: 1, grade_id: @grade2.id)
-# Deck.create(name: "Grammar", level: 1, grade_id: @grade2)
-# Deck.create(name: "Vocabulary", level: 1, grade_id: @grade2)
+
 
 10.times do 
   var1 = rand(0..2)
@@ -36,6 +35,7 @@ end
   Card.create(question1: "#{var1} - #{var2}", answer: "#{answer}", hint: hint, deck_id: @subtraction_deck.id )
 end
 
+#multiplication
 10.times do 
   var1 = rand(0..2)
   var2 = rand(2..5) 
@@ -44,6 +44,7 @@ end
   Card.create(question1: "#{var1} x #{var2}", answer: "#{answer}", hint: hint, deck_id: @multiplication_deck.id )
 end
 
+#division
 
 Card.create(question1: "10 / 2", answer: "5", hint: "Subtract 1 from 6 to get the answer", deck_id: @division_deck.id )
 Card.create(question1: "5 / 1", answer: "5", hint: "Subtract 1 from 6 to get the answer", deck_id: @division_deck.id )
@@ -130,10 +131,10 @@ end
 
 Card.create(question1: "40 / 2", answer: "20", hint: "Subtract 1 from 21 to get the answer", deck_id: @division_deck.id )
 Card.create(question1: "30 / 1", answer: "30", hint: "Subtract 1 from 31 to get the answer", deck_id: @division_deck.id )
-Card.create(question1: "100 / 100", answer: "100", hint: "Subtract 1 from 101 to get the answer", deck_id: @division_deck.id )
+Card.create(question1: "100 / 100", answer: "1", hint: "Subtract 1 from 101 to get the answer", deck_id: @division_deck.id )
 Card.create(question1: "10 / 10", answer: "1", hint: "Subtract 1 from 1 to get the answer", deck_id: @division_deck.id )
 Card.create(question1: "9 / 2", answer: "4.5", hint: "Subtract 1 from 5.5 to get the answer", deck_id: @division_deck.id )
-Card.create(question1: "15 / 2", answer: "2", hint: "Subtract 1 from 3 to get the answer", deck_id: @division_deck.id )
+Card.create(question1: "15 / 2", answer: "7.5", hint: "Subtract 1 from 8.5 to get the answer", deck_id: @division_deck.id )
 
 
 
