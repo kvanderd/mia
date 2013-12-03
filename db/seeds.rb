@@ -27,10 +27,10 @@
   Card.create(question1: "#{var1} + #{var2}", answer: "#{answer}", hint: hint, deck_id: @addiction_deck.id )
 end
 
-
+#subtraction
 10.times do 
-  var1 = rand(0..2)
-  var2 = rand(2..5) 
+  var2 = rand(0..2)
+  var1 = rand(2..5) 
   answer = var1 - var2
   hint = "Add 1 to #{answer - 1} to get the answer."
   Card.create(question1: "#{var1} - #{var2}", answer: "#{answer}", hint: hint, deck_id: @subtraction_deck.id )
@@ -67,10 +67,10 @@ Card.create(question1: "8 / 2", answer: "4", hint: "Subtract 1 from 5 to get the
   Card.create(question1: "#{var1} + #{var2}", answer: "#{answer}", hint: hint, deck_id: @addiction_deck.id )
 end
 
-
+#subtraction
 10.times do 
-  var1 = rand(2..5)
-  var2 = rand(5..10) 
+  var2 = rand(2..5)
+  var1 = rand(5..10) 
   answer = var1 - var2
   hint = "Add 1 to #{answer - 1} to get the answer."
   Card.create(question1: "#{var1} - #{var2}", answer: "#{answer}", hint: hint, deck_id: @subtraction_deck.id )
@@ -109,10 +109,11 @@ Card.create(question1: "16 / 8", answer: "2", hint: "Subtract 1 from 3 to get th
   Card.create(question1: "#{var1} + #{var2}", answer: "#{answer}", hint: hint, deck_id: @addiction_deck.id )
 end
 
+#subtraction
 
 10.times do 
-  var1 = rand(8..15)
-  var2 = rand(16..200) 
+  var2 = rand(8..15)
+  var1 = rand(16..200) 
   answer = var1 - var2
   hint = "Add 1 to #{answer - 1} to get the answer."
   Card.create(question1: "#{var1} - #{var2}", answer: "#{answer}", hint: hint, deck_id: @subtraction_deck.id )
