@@ -1,11 +1,9 @@
 class GuessesController < ApplicationController
 
 	def new
-    round = session[:round_id]
-		@guess = Guess.new(round_id:round, card_id: nil)
-		@round = Round.find(round)
+    @round = Round.find(params[:format])
+		@guess = Guess.new(round_id:@round, card_id: nil)
     deck = Deck.find(@round.deck_id)
-    # you could change this to not use the gon.
     gon.shuffled_deck = deck.cards.map { |card| card.id }.shuffle
 	end
 

@@ -31,6 +31,21 @@ $mia-brown: #643e27;
 	color: $mia-purple;
 }
 
+
+/* Firefox 3.0+ */
+
+.mia_welcome {
+	height: 25em;
+	margin-top: 0%;
+}
+
+/* Safari 2.0+ */
+
+.mia_welcome {
+	height: 25em;
+	margin-top: 10%;
+}
+
 /*iphone or small*/
 @media  screen and (max-width: 650px) {
 

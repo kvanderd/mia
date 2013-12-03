@@ -47,3 +47,16 @@ $mia-brown: #643e27;
 	font-size: 5vw;
 	color: $mia-pink;
 }
+/* Firefox 3.0+ */
+
+#card {
+	margin-top: 1%;
+	height: 14em;
+}
+
+/* Safari 2.0+ */
+
+#card {
+	margin-top: 10%;
+	height: 14em;
+}
