@@ -31,11 +31,17 @@ $mia-brown: #643e27;
 	color: $mia-purple;
 }
 
-
+* {
+	border: 1px solid red;
+}
 /* Firefox 3.0+ */
 
 .mia_welcome {
-	height: 25em;
+	height: 10em;
+	margin-top: 0%;
+}
+
+.grade_container {
 	margin-top: 0%;
 }
 
