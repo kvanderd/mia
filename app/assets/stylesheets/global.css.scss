@@ -1,0 +1,70 @@
+h1, h2, h3, h4, h5, h6, a {
+  font-family: Finger Paint;
+}
+
+.navigation {
+	display: block;
+	position: relative;
+	padding-top: 1%;
+	a, p {
+	display: inline-block;
+	position: relative;
+	margin-left: 2%;
+	color: #fff;
+	}
+	a:visited { color: #fff; }
+	.button {
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		margin-left: 1%;
+		height: 25%;
+		width: 15%;
+		border: .5em solid #4f0c8d;
+		background-color: #60ba3e;
+		border-radius: 2em;
+	  -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    
+    -webkit-box-shadow: inset .1em .1em .1em .1em gray;
+    -moz-box-shadow: inset .1em .1em .1em .1em gray;
+    box-shadow: inset .1em .1em .1em .1em gray;
+	}
+}
+
+.pull_right {
+	float: right;
+}
+
+body {
+	background: url("/assets/background_smaller_copy.jpg") no-repeat center center fixed;
+  background-size: cover;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+}
+
+
+#footer {
+	position:absolute;
+	bottom:0;
+	width: 90%;
+	height:4.5em;   /* Height of the footer */
+}
+/*
+#dren)colors{
+  4f0c8d - purple
+  cc33ff - pink
+  60ba3e - green
+  643e27 - brown
+}*/
+
+
+
+
+// ul {
+// 	li {
+// 	 display: inline;
+// 	}
+// }

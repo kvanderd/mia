@@ -1,0 +1,6 @@
+.user_stats.grid_12
+	%h1= "Welcome #{@user.username}"
+	- @user.rounds.each do |round|
+		%h2= "Deck Name: #{round.deck.name}, Level #{round.deck.level}"
+		%h4= "Percentage Correct: #{round.correct_percentage}"
+		%h5= "Played on: #{round.created_at.strftime('%d %b. %Y')}"

@@ -1,0 +1,44 @@
+.mia_welcome {
+	background: url("/assets/mia_love.png") no-repeat;
+	display: inline-block;
+	position: relative;
+	height: 22em;
+	width: 20em;
+	margin-top: 5%;
+}
+
+.grade_container {
+	display: inline-block;
+	position: relative;
+	margin-top: 7%;
+	margin-left: 7%;
+	h2 {
+	margin-top: 5%;
+	font-size: 3vw;
+	}
+	li { display: inline;}
+	a { color: #643e27;}
+	a:hover { color: #4f0c8d}
+}
+
+.page_welcome {
+	text-align: center;
+	color: #4f0c8d;
+}
+
+/*iphone or small*/
+@media  screen and (max-width: 650px) {
+
+}
+/*ipad or Medium*/
+
+@media screen and (max-width: 1024px) {
+
+ h2 {
+	margin-top: 5%;
+	font-size: 3vw;
+	}
+
+}
+
+

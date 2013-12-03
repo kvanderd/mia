@@ -1,18 +1,31 @@
 class GuessesController < ApplicationController
 
-  def new
-  	@round = Round.find(params[:round_id])
-  	@card = @round.deck.serve_card(@round.deck)
-  	@operator = @round.deck.generate_deck_operator(@round.deck)
-  	@guess = Guess.new()
+	def new
+    round = session[:round_id]
+		@guess = Guess.new(round_id:round, card_id: nil)
+		@round = Round.find(round)
+    deck = Deck.find(@round.deck_id)
+    # you could change this to not use the gon.
+    gon.shuffled_deck = deck.cards.map { |card| card.id }.shuffle
+	end
+
+  def get_card
+    @card = Card.find(params[:card_id])
+
+    respond_to do |format|
+      format.json { render :json => @card }
+    end
   end
 
+  def create 
 
-  def create
-  	#evaluate if the answer is correct or not
-  	Guess.create(answer: params[:guess][:answer], round_id: params[:round_id])
-  	redirect_to new_round_guess_path(params[:round_id])
+    @card = Card.find(params[:card_id])
+  	@guess = Guess.create!(correct: @card.is_correct?(params[:guess]), card_id: @card.id, round_id: session[:round_id])
+    @response = @card.response(@guess.correct)
+
+    respond_to do |format|
+      format.json { render json: @response.to_json }  
+    end
   end
 
 end
-

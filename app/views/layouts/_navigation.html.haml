@@ -1,0 +1,8 @@
+.gird_12.navigation
+	.button=link_to "Home", root_path
+	- if current_user
+		.pull_right.button=link_to 'Logout', session_path(current_user), method: :delete
+		.pull_right=link_to current_user.username, user_path(current_user.id)
+	- else 
+		.pull_right.button=link_to 'Login', new_session_path
+		.pull_right.button=link_to 'Create', new_user_path, id: "create-link"

@@ -14,9 +14,11 @@
 ActiveRecord::Schema.define(:version => 20131108234435) do
 
   create_table "cards", :force => true do |t|
-    t.integer "num1"
-    t.integer "num2"
-    t.integer "num3"
+    t.string  "question1"
+    t.string  "question2"
+    t.string  "answer"
+    t.string  "hint"
+    t.string  "operator"
     t.integer "deck_id"
   end
 
@@ -32,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20131108234435) do
 
   create_table "guesses", :force => true do |t|
     t.integer "answer"
+    t.boolean "correct"
     t.integer "round_id"
     t.integer "card_id"
   end
@@ -41,6 +44,13 @@ ActiveRecord::Schema.define(:version => 20131108234435) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

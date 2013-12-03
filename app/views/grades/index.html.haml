@@ -1,4 +1,9 @@
-%h1 Mia Math
-%ul
+= title "Online Math Games For Girls" 
+%h1.grid_12.page_welcome Mia Math
+%h2 Select Your Grade:
+.grid_4.grade_container
 	-@grades.each do |grade|
-		%li=link_to grade.name,  grade_decks_path(grade.id)
+		%h2=link_to "#{grade.name}", decks_path(grade.id)
+		
+
+.grid_5.mia_welcome

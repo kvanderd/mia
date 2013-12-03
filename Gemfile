@@ -22,15 +22,22 @@ gem 'debugger'
 
 
 group :test, :development do
+  gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'pry'
   gem 'annotate'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'awesome_print'
+  gem 'wirble'
+  gem 'quiet_assets'
   gem 'factory_girl_rails'
   gem 'faker'
 end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -43,10 +50,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'coffee-rails'
 end
-
+gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'gon'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

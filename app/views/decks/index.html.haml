@@ -1,3 +1,8 @@
-%ul
-	-@decks.each do |deck|
-		%li=link_to "#{deck.name} Level #{deck.level}", rounds_path(deck.id), :method => :post
+= title "#{@decks.pop.grade.name} Math Games"
+%h1.grid_12.page_welcome= "Select A #{@decks.pop.grade.name} Deck"
+.deck_container
+	%ul.grid_3.list_decks
+		-@decks.each do |deck|
+			%h2=link_to "#{deck.name}", rounds_path(deck.id), :method => :post
+
+	.grid_4.mia_pointing

@@ -14,6 +14,13 @@ class Deck < ActiveRecord::Base
 	belongs_to :grade
 	attr_accessible :name, :level, :grade_id
 
+  def to_param
+    "#{id}-#{name}".parameterize
+  end
+
+  def prepare_deck
+    self.cards.map { |card| card.id }.shuffle
+  end
 
   def serve_card(deck)
     deck.cards.pop

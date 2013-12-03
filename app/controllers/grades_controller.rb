@@ -1,6 +1,7 @@
 class GradesController < ApplicationController
 
   def index
-    @grades = Grade.all
+	  @grades =  Grade.all
   end
+
 end

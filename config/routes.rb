@@ -1,14 +1,27 @@
 Mia::Application.routes.draw do
+  resources :grades, only: [:index]
+  resources :decks, only: [:index]
+  resources :users
+  resources :sessions, only: [:create, :new, :destroy]
 
+  # resources :details 
+  get '/about', controller: 'details', action: 'about'
+  get '/contact', controller: 'details', action: 'contact'
+
+  resource :rounds do
+    resource :guesses do
+      get 'get_card', :to => 'guesses#get_card'
+    end
+  end
+
+  
   root :to => 'grades#index'
 
-  resources :grades do 
-    resources :decks, only: [:index]
-  end
-  
-  resources :rounds do
-    resources :guesses, only: [:new, :create]
-  end
+
+  resource :cards, only: [:show]
+  # resources :rounds do
+  #   resources :guesses, only: [:new, :create, :index]
+  # end
  
   
   # The priority is based upon order of creation:

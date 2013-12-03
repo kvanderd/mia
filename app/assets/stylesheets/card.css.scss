@@ -1,0 +1,49 @@
+#card {
+	margin-top: 10%;
+	height: 11em;
+	#card_holder {
+		background: url("/assets/card.png") no-repeat;
+		height: 100%;
+		width: 100%;
+		.num1, .num2, .operator { 
+			font-size: 8vw;
+			color: #60ba3e;
+			margin: 10% 0% 0% 18%;
+			padding-top: .5em;
+	  }
+	}
+}
+
+
+#guess_answer {
+	height: 10%;
+	width: 60%;
+	margin-left: 5%;
+	border: 5px solid #4f0c8d;
+}
+
+#answer {
+	border: 5px solid #4f0c8d;
+	background-color: white;
+	color: #4f0c8d;
+}
+
+.hide { 
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+
+#is_correct {
+	text-align: center;
+	font-size: 5vw;
+	color: #cc33ff;
+}
+/*
+#dren)colors{
+  4f0c8d - purple
+  cc33ff - pink
+  60ba3e - green
+  643e27 - brown
+}*/

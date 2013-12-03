@@ -1,4 +1,4 @@
 =form_for :guess, url: {action: "create"} do |t|
 	=t.text_field :answer
-	/ =#t.hidden_field(round_id:  @round.id) also needs card id
-	=t.submit "submit"
+	=t.hidden_field "card_id"
+	=t.submit "submit", id: "answer"
