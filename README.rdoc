@@ -1,42 +1,5 @@
-== Mia Math - OR Dren
+= Mia Math
 
-Hints
-  add database attribute - hint
-  click event in js
-  (if hint is empty display "sorry, no hint")
+=== Rails Application that teaches girl math.
 
-== Curriculum (should we stop at math) ==
-
-===2nd Grade
-
-===== Math 
-
-== Four Basic Operators (+, -, x, %)
-
-===== Vocabulary 
-
-== Definition (student gives word)
-(hint: the word begins with foo)
-
-==== Punctuation 
-
-===student is given a sentence to fix
-
-=== student given a sentence to put in order.
-
-(hint: a comma is foo and used bar)
-
-=== 3rd Grade
-
-
-=== 4th Grade
-
-
-=== 5th Grade  
-
-
-= TIll Launch
-
-=== Display Decks better
-
-=== Mia hint image needs to be a clickable button
+==== live application: www.miamath.com
