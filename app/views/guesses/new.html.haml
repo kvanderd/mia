@@ -1,0 +1,11 @@
+.board.grid_12
+	.grid_4= render "/guesses/hint"
+	.flip.grid_5
+		.card
+			.face.front= render "/guesses/card"
+			.face.back.is_correct
+		= render "guesses/form"
+		.hint		
+
+#error
+

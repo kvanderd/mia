@@ -5,28 +5,27 @@ $mia-brown: #643e27;
 
 
 
-#card {
-	margin-top: 10%;
-	height: 11em;
-	background: url("/assets/card.png") no-repeat;
-	#card_holder {
-		display: block;
-		.num1, .num2, .operator { 
-			text-align: center;
-			font-size: 5vw;
-			color: $mia-brown;
-			// margin: 0% 0% 0% 22%;
-			padding-top: 1.2em;
-	  }
-	}
-}
+// .card {
+// 	margin-top: 10%;
+// 	height: 11em;
+// 	background: url("/assets/card.png") no-repeat;
+// 	#card_holder {
+// 		display: block;
+// 		.num1, .num2, .operator { 
+// 			text-align: center;
+// 			font-size: 5vw;
+// 			color: $mia-brown;
+// 			// margin: 0% 0% 0% 22%;
+// 			padding-top: 1.2em;
+// 	  }
+// 	}
+// }
 
 
 #guess_answer {
-	height: 10%;
 	width: 50%;
 	margin-left: 10%;
-	margin-top: 30%;
+	margin-top: 10%;
 	border: 5px solid $mia-purple;
 }
 
@@ -44,9 +43,9 @@ $mia-brown: #643e27;
 
 
 
-#is_correct {
+.is_correct {
 	text-align: center;
-	font-size: 5vw;
+	font-size: 1vw;
 	color: $mia-pink;
 }
 /* Firefox 3.0+ */
