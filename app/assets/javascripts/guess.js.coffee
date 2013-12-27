@@ -15,11 +15,11 @@ class Round
 
 	getCard: (cardId, deck) ->
 		if Number(deck.length) == Number(deck.counter)
-			window.location.href = "/rounds" 
+			window.location.href = "http://www.miamath.com/rounds" 
 		else
 			self = @
 			deck.counter++
-			$.ajax "/rounds/guesses/get_card",
+			$.ajax "http://www.miamath.com/rounds/guesses/get_card",
 	 			method: "GET",
 	 			data: "cardId=" + deck.counter
 	 			success: (data) ->	
@@ -59,7 +59,7 @@ $ ->
 		$('.card').addClass('flipped')
 		guess = Number $("#guess_answer").val()
 		cardId = Number $('#guess_card_id').val()
-		$.ajax "/rounds/guesses",
+		$.ajax "http://www.miamath.com/rounds/guesses",
 			method: "POST",
 			data: guess: guess, card_id: cardId,
 			dataType: "text"
