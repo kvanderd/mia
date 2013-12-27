@@ -78,18 +78,19 @@ body {
 	.grid_11,
 	.grid_12 {
 		width: 100%;
-}
-.button{ 
-	width: 100%;
-	float: center;
-}
+	}
+	.button{ 
+		width: 100%;
+		float: center;
+		margin-top: 1%;
+	}
 
 }
 
 @media screen and (max-width: 1024px) {
-.button a{
-	font-size: 70%;
-}
+// .button a{
+// 	font-size: 70%;
+// }
 
 }
 

@@ -67,35 +67,33 @@ $mia-brown: #643e27;
 	.grid_11,
 	.grid_12 {
 		width: 100%;
-}
+	}
 
 
 
-.mia_welcome {
-	display: none;
-}
+	.mia_welcome {
+		display: none;
+	}
 
-h2 {
-	display: none;
-}
+	.love {
+		display: none;
+	}
 
+	.grade_container {
+	 width: 100%;
+	 text-align: center;
+	 margin-top: -1%;
+	}
 
-.grade_container {
- width: 100%;
- text-align: center;
- margin-top: -1%;
-}
+	.grade_container h3 {
+		width: 100%;
+		font-size: 9.5vw;
+	}
 
-.grade_container h3 {
-	width: 100%;
-	font-size: 9.5vw;
-}
+	.page_welcome {
+		font-size: 5.5vw;
+	}
 
-.page_welcome {
-	font-size: 5.5vw;
-}
-
-#footer {display: none;}
 
 
 }

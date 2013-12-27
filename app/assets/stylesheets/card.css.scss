@@ -21,6 +21,12 @@ $mia-brown: #643e27;
 // 	}
 // }
 
+.board {
+	display: inline-block;
+	position: relative;
+	padding-top: 5em;
+}
+
 
 #guess_answer {
 	width: 50%;
@@ -60,4 +66,28 @@ $mia-brown: #643e27;
 #card {
 	margin-top: 10%;
 	height: 14em;
+}
+
+
+
+/*iphone or small*/
+@media  screen and (max-width: 650px) {
+	.grid_1,
+	.grid_2,
+	.grid_3,
+	.grid_4,
+	.grid_5,
+	.grid_6,
+	.grid_7,
+	.grid_8,
+	.grid_9,
+	.grid_10,
+	.grid_11,
+	.grid_12 {
+		width: 100%;
+	}
+	#mia_hint_container img {display: none;}
+
+
+
 }

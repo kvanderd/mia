@@ -14,15 +14,17 @@
 		list-style-type: none;
 	}
 	a {
-		font-size: 2vw;
+		font-size: 3.5vw;
 		color: #cc33ff;
 	}
 }
 
 .deck_container {
-	position: absolute;
-	top: 40%;
-	left: 20%;
+	display: inline-block;
+	position: relative;
+	margin-top: 20%;
+	margin-left: 5%;
+
 }
 
 
@@ -56,21 +58,32 @@
 	.grid_12 {
 		width: 100%;
 }
+  .mia_pointing img {display: none;}
 
 
-
-	#footer {display: none;}
-
-	img {display: none;}
+.list_decks {
+	height: 10em;
+	width: 30em;
+	display: inline-block;
+	position: relative;
+	font-family: Finger Paint;
+	li {
+		list-style-type: none;
+	}
+	a {
+		font-size: 6.5vw;
+		color: #cc33ff;
+	}
+}
 
 }
 /*ipad or Medium*/
 
 @media screen and (max-width: 1024px) {
 
-.mia_welcome {
-	margin-top: -1em;
-}
+// .mia_welcome {
+// 	margin-top: -1em;
+// }
 
 }
 
