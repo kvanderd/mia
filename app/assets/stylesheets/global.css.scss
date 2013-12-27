@@ -7,15 +7,25 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: Finger Paint;
 }
 
+h1 {
+	font-size: 1.750em;
+}
+
+img {
+	max-width: 100%;
+}
+
 .navigation {
 	display: block;
 	position: relative;
 	padding-top: 1%;
+	padding-bottom: 3%;
 	a, p {
 	display: inline-block;
 	position: relative;
 	margin-left: 2%;
 	color: #fff;
+	font-size: 1em;
 	}
 	a:visited { color: #fff; }
 	.button {
@@ -42,6 +52,7 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 body {
+	overflow: hidden;
 	background: url("/assets/background_smaller_copy.jpg") no-repeat center center fixed;
   background-size: cover;
 	-webkit-background-size: cover;

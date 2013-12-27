@@ -3,7 +3,7 @@
 %h2 Select Your Grade:
 .grid_4.grade_container
 	-@grades.each do |grade|
-		%h2=link_to "#{grade.name}", decks_path(grade.id)
+		%h3=link_to "#{grade.name}", decks_path(grade.id)
 		
 
 .grid_5.mia_welcome
