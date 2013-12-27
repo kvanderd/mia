@@ -8,16 +8,13 @@ class GuessesController < ApplicationController
   end
 
   def get_card
-    ap params
     @card = Card.find(params[:cardId])
-
     respond_to do |format|
       format.json { render :json => @card }
     end
   end
 
   def create 
-    ap params
     @card = Card.find(params[:card_id])
     @guess = Guess.create!(correct: @card.is_correct?(params[:guess]), card_id: @card.id, round_id: session[:round_id])
     @response = @card.response(@guess.correct)
