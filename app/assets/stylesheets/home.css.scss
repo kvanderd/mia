@@ -4,11 +4,11 @@ $mia-green: #60ba3e;
 $mia-brown: #643e27;
 
 .mia_welcome {
-	background: url("/assets/mia_love.png") no-repeat;
+	// background: url("/assets/mia_love.png") no-repeat;
 	display: inline-block;
 	position: relative;
 	width: 18em;
-	max-width: 100%;
+	margin-bottom: 5em;
 }
 
 .grade_container {
@@ -41,7 +41,7 @@ $mia-brown: #643e27;
 	margin-top: 0%;
 	h3 {
 	margin-top: 5%;
-	font-size: 3.5vw;
+	font-size: 3vw;
 	}
 }
 
@@ -80,10 +80,16 @@ h2 {
 
 .grade_container {
  width: 100%;
- font-size: 4.5vw;
+ font-size: 5.5vw;
  text-align: center;
- margin-top: 0%;
+ margin-top: -1%;
 }
+
+.page_welcome {
+	font-size: 5.5vw;
+}
+
+#footer {display: none;}
 
 
 }
@@ -91,14 +97,9 @@ h2 {
 
 @media screen and (max-width: 1024px) {
 
- h2 {
-	margin-top: 5%;
-	font-size: 3vw;
-	}
-
-	.mia_welcome {
-		margin-top: 0%;
-	}
+.mia_welcome {
+	margin-top: -1em;
+}
 
 }
 

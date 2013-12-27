@@ -1,8 +1,8 @@
 = title "#{@decks.last.grade.name} Math Games"
 %h1.grid_12.page_welcome= "Select A #{@decks.last.grade.name} Deck"
 .deck_container
-	%ul.grid_3.list_decks
+	%ul.grid_5.list_decks
 		-@decks.each do |deck|
 			%h2=link_to "#{deck.name}", rounds_path(deck.id), :method => :post
 
-	.grid_4.mia_pointing
+	.grid_6.mia_pointing= image_tag("mia_waves5.png")

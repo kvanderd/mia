@@ -1,9 +1,9 @@
 .mia_pointing {
-	background: url("/assets/mia_waves.png") no-repeat;
+	// background: url("/assets/mia_waves.png") no-repeat;
 	display: inline-block;
 	position: relative;
-	width: 10em;
-	height: 16em;
+	width: 100%;
+	margin-top: -10%;
 }
 
 .list_decks {
@@ -14,7 +14,7 @@
 		list-style-type: none;
 	}
 	a {
-		font-size: 3vw;
+		font-size: 2vw;
 		color: #cc33ff;
 	}
 }
@@ -37,3 +37,41 @@
 .mia_pointing {
 	height: 20em;
 }
+
+
+
+/*iphone or small*/
+@media  screen and (max-width: 650px) {
+	.grid_1,
+	.grid_2,
+	.grid_3,
+	.grid_4,
+	.grid_5,
+	.grid_6,
+	.grid_7,
+	.grid_8,
+	.grid_9,
+	.grid_10,
+	.grid_11,
+	.grid_12 {
+		width: 100%;
+}
+
+
+
+	#footer {display: none;}
+
+	img {display: none;}
+
+}
+/*ipad or Medium*/
+
+@media screen and (max-width: 1024px) {
+
+.mia_welcome {
+	margin-top: -1em;
+}
+
+}
+
+

@@ -15,36 +15,28 @@ img {
 	max-width: 100%;
 }
 
-.navigation {
-	display: block;
-	position: relative;
-	padding-top: 1%;
-	padding-bottom: 3%;
-	a, p {
+
+.button {
 	display: inline-block;
 	position: relative;
-	margin-left: 2%;
-	color: #fff;
-	font-size: 1em;
-	}
-	a:visited { color: #fff; }
-	.button {
-		display: inline-block;
-		position: relative;
-		text-align: center;
-		margin-left: 1%;
-		height: 25%;
-		width: 15%;
-		border: .5em solid #4f0c8d;
-		background-color: #60ba3e;
-		border-radius: 2em;
-	  -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
-    
-    -webkit-box-shadow: inset .1em .1em .1em .1em gray;
-    -moz-box-shadow: inset .1em .1em .1em .1em gray;
-    box-shadow: inset .1em .1em .1em .1em gray;
-	}
+	text-align: center;
+	margin-left: 1%;
+	height: 25%;
+	width: 9%;
+	border: .5em solid #4f0c8d;
+	background-color: #60ba3e;
+	border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  
+  -webkit-box-shadow: inset .1em .1em .1em .1em gray;
+  -moz-box-shadow: inset .1em .1em .1em .1em gray;
+  box-shadow: inset .1em .1em .1em .1em gray;
+  a {
+  	color: white;
+  	font-size: 90%;
+
+  }
 }
 
 .pull_right {
@@ -65,9 +57,30 @@ body {
 #footer {
 	position:absolute;
 	bottom:0;
-	width: 90%;
+	width: 80%;
 	height:4.5em;   /* Height of the footer */
 }
+
+
+
+/*iphone or small*/
+@media  screen and (max-width: 650px) { 
+
+.button a{
+	font-size: 7%;
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+.button a{
+	font-size: 70%;
+}
+
+}
+
+
+
 /*
 #dren)colors{
   4f0c8d - purple
