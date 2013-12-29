@@ -4,7 +4,7 @@ class RoundsController < ApplicationController
   	user = current_user.id if current_user
   	round = Round.create(deck_id: params[:format], user_id: user)
   	session[:round_id] = round.id
-	  redirect_to new_rounds_guesses_path(round.id)
+	  redirect_to new_rounds_guesses_path(round)
   end
 
   def show

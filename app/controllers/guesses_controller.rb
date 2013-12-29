@@ -8,6 +8,7 @@ class GuessesController < ApplicationController
   end
 
   def get_card
+    ap params
     @card = Card.find(params[:cardId])
     respond_to do |format|
       format.json { render :json => @card }

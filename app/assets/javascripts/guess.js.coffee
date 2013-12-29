@@ -14,6 +14,7 @@ class Round
 	# 	@.counter++
 
 	getCard: (cardId, deck) ->
+		console.log cardId
 		if Number(deck.length) == Number(deck.counter)
 			window.location.href = "http://www.miamath.com/rounds" 
 		else
@@ -21,7 +22,7 @@ class Round
 			deck.counter++
 			$.ajax "http://www.miamath.com/rounds/guesses/get_card",
 	 			method: "GET",
-	 			data: "cardId=" + deck.counter
+	 			data: "cardId=" + cardId    #"cardId=" + deck.counter
 	 			success: (data) ->	
 	 				self.dealCard(new Card(data.answer, data.hint, data.id, data.question1))
 	 			error: ->
