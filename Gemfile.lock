@@ -104,6 +104,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.2)
     multi_json (1.8.2)
+    newrelic_rpm (3.7.1.180)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pg (0.17.0)
@@ -206,6 +207,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   jquery-ui-rails
+  newrelic_rpm
   pg
   pry
   quiet_assets
