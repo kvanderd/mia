@@ -14,11 +14,11 @@ class Round
   getCard: (cardId, deck) ->
     console.log cardId
     if Number(deck.length) == Number(deck.counter)
-      window.location.href = "http://www.miamath.com/rounds"
+      window.location.href = "/rounds"
     else
       self = @
       deck.counter++
-      $.ajax "http://www.miamath.com/rounds/guesses/get_card",
+      $.ajax "/rounds/guesses/get_card",
         method: "GET",
         data: "cardId=" + cardId    #"cardId=" + deck.counter
         success: (data) ->
@@ -58,7 +58,7 @@ $ ->
     $('.card').addClass('flipped')
     guess = Number $("#guess_answer").val()
     cardId = Number $('#guess_card_id').val()
-    $.ajax "http://www.miamath.com/rounds/guesses",
+    $.ajax "/rounds/guesses",
       method: "POST",
       data: guess: guess, card_id: cardId,
       dataType: "text"
@@ -207,7 +207,7 @@ $ ->
 #           $counter++
 #           showResponse(data)
 #         error: ->
-#           alert "fuck that wasn't suppose to happen - Click Event"
+#           alert "oups that wasn't suppose to happen - Click Event"
 
 #   $(".love").click (event) =>
 #     event.preventDefault()
