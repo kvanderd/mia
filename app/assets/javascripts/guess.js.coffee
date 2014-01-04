@@ -1,4 +1,4 @@
-
+ 
 
 class Deck
 	constructor: (@ids, @length, @counter) ->
@@ -8,6 +8,18 @@ class Deck
 class Card 
 	constructor: (@answer, @hint, @id, @question1) ->
 
+class Guess
+	constructor: (@answer, @cardId) ->
+		@answer = Number @answer 
+		@cardId = Number @cardId
+#validate answer and cardId is number 
+	save: =>
+		$.ajax "/rounds/guesses",
+			method: "POST",
+			data: guess: @answer, card_id: @cardId,
+			dataType: "text"
+
+
 class Round
 
 	# increaseCounter: ->
@@ -16,11 +28,11 @@ class Round
 	getCard: (cardId, deck) ->
 		console.log cardId
 		if Number(deck.length) == Number(deck.counter)
-			window.location.href = "http://www.miamath.com/rounds" 
+			window.location.href = "/rounds" 
 		else
 			self = @
 			deck.counter++
-			$.ajax "http://www.miamath.com/rounds/guesses/get_card",
+			$.ajax "/rounds/guesses/get_card",
 	 			method: "GET",
 	 			data: "cardId=" + cardId    #"cardId=" + deck.counter
 	 			success: (data) ->	
@@ -58,17 +70,13 @@ $ ->
 	$("#answer").click (event) ->
 		event.preventDefault()
 		$('.card').addClass('flipped')
-		guess = Number $("#guess_answer").val()
-		cardId = Number $('#guess_card_id').val()
-		$.ajax "http://www.miamath.com/rounds/guesses",
-			method: "POST",
-			data: guess: guess, card_id: cardId,
-			dataType: "text"
-			success: (data) ->
-				round.collectCard().after(round.showAnswer(data))
-				round.getCard(deck.ids.pop(), deck)
-			error: ->
- 				alert "Oups, something went wrong!!"
+		guess = new Guess($("#guess_answer").val(), $('#guess_card_id').val())
+		xhr = guess.save()
+		xhr.done (data) ->
+			round.collectCard().after(round.showAnswer(data))
+			round.getCard(deck.ids.pop(), deck)
+		xhr.fail (data) ->
+			alert "Oups, something went wrong!!"
 				
 	$(".love").click (event) =>
 		event.preventDefault()

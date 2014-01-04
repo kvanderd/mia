@@ -1,4 +1,4 @@
-# == Schema Information
+G# == Schema Information
 #
 # Table name: users
 #
