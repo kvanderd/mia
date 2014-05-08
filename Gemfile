@@ -13,7 +13,7 @@ gem 'thin'
 gem 'haml-rails'
 
 # Use debugger
-gem 'debugger'
+# gem 'debugger'
 
 #bootstrap 3.0rc1
 # gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
@@ -56,7 +56,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'gon'
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

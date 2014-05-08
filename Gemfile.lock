@@ -56,16 +56,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    columnize (0.3.6)
     daemons (1.1.9)
     database_cleaner (1.2.0)
     debug_inspector (0.0.2)
-    debugger (1.6.3)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.4)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.4)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -104,7 +97,6 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.2)
     multi_json (1.8.2)
-    newrelic_rpm (3.7.1.180)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pg (0.17.0)
@@ -200,14 +192,12 @@ DEPENDENCIES
   capybara
   coffee-rails
   database_cleaner
-  debugger
   factory_girl_rails
   faker
   gon
   haml-rails
   jquery-rails
   jquery-ui-rails
-  newrelic_rpm
   pg
   pry
   quiet_assets

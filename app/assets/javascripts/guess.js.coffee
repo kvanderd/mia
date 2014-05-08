@@ -21,10 +21,7 @@ class Guess
 
 
 class Round
-
-	# increaseCounter: ->
-	# 	@.counter++
-
+	constructor: (@cardView) ->
 	getCard: (cardId, deck) ->
 		console.log cardId
 		if Number(deck.length) == Number(deck.counter)
@@ -41,30 +38,43 @@ class Round
 	 				alert "Oups, something went wrong"
 
 	dealCard: (card) ->
-		$(".num1").append(card.question1)
+		@cardView.setCard(card)
+		# $(".num1").append(card.question1)
 		$("#guess_card_id").append().val(card.id)
 		$(".hint").append(card.hint)
 
 	collectCard: () ->
 		$(".is_correct").show()
-		$(".num1, .is_correct, .hint").empty()
+		$(".is_correct, .hint").empty()
 		$("#guess_answer").val(" ")
 		$(".response").val " "
 		# $(".board").addClass("hide")
 		
-
+  
 	showAnswer: (answer) ->
 		$(".hint").addClass("hide")
 		$(".is_correct").append(answer).delay(1500).fadeOut "slow", ->
 			# $(".board").removeClass("hide")
 			$('.card').removeClass('flipped')
 
+#### View Class
+
+class CardView
+	constructor: (@element) ->
+	dom: (selector) =>
+		$(@element).find selector
+
+	setCard: (card) ->
+		@dom(".num1").text(card.question1)
+
+
 			
 $ ->
 	$('.card').addClass('.front')
 	$(".hint").addClass("hide")
 	deck = new Deck(gon.shuffled_deck, gon.shuffled_deck.length, 0)
-	round = new Round
+	cardView = new CardView($(".card"))
+	round = new Round(cardView)
 	round.getCard(deck.ids.pop(), deck)
 
 	$("#answer").click (event) ->
@@ -83,7 +93,6 @@ $ ->
 		$(".hint").removeClass("hide")			
 					
 				
-	
 				#create a new round object. Show return data and then get a new card
 				# here you remove the card and show the answer - the round should do this
 #increase the counter
