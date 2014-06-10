@@ -1,7 +1,6 @@
 = Mia Math
 
-=== Rails Application that teaches girl math.
+Rails Application that teaches basic math through a card game. All game logic is in object oriented CoffeeSript. 
+Hand spun responsive design (media queries and fluid grid) Sass, Haml, Postgresql.
 
 ==== live application: www.miamath.com
-
-===== MIT License (MIT)
